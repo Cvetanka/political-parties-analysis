@@ -7,7 +7,7 @@ curl http://localhost:$PORT
 while [ $? -ne 0 -a $retries -gt 0 ] ; do
    echo "Server is starting, retrying the connection..." 
    sleep 1
-   retries=$(( $retries + 1 ))
+   retries=$(( $retries - 1 ))
    curl http://localhost:$PORT
 done
 if [ $? -ne 0 ] ; then
