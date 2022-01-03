@@ -1,9 +1,3 @@
-def import_or_install(plotnine):
-    try:
-        __import__(plotnine)
-    except ImportError:
-        pip.main(['install', plotnine]) 
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -110,7 +104,7 @@ def linear_model(df,dependant_variable):
  
 
 def two_D_plot(df, x_value, y_value):
-    fig = plt.figure(figsize=(20, 10))
+    fig = plt.figure(figsize=(15, 10))
     sns.regplot(y=x_value, x=y_value, data=df);
     
     
